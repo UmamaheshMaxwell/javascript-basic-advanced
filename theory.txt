@@ -1,0 +1,235 @@
+
+Introduction
+Hoisting
+Types
+Primitive Types
+functions
+Objects
+arrays
+Closures
+Bind call apply
+this
+Prototypes
+Class
+Inheritance
+Polymorphism
+Singleton
+Module Pattern
+
+
+JavaScript (22/09/2020)
+-----------
+Javascript is a programming language that allows us to implement complex
+features on web pages
+
+HTML - is the markup language that we use to structure and give meaning to our 
+       web content
+
+CSS - is a language of style rules that we used to apply styling to our HTMl Cotent
+
+Javsscript - is scripting language that enables you to create dynamically 
+             updating content
+
+
+Syntax Parser
+-------------
+A program that reads your code and determines what it does and if its grammar is valid
+
+Lexical Environment
+-------------------
+Where something sits physically in the code we write
+
+Execution Context
+-----------------
+A wrapper to help manage the code that is running
+
+lexical 1  -
+lexical 2
+lexical 3
+
+for e.g There are lots of lexical environments which one is currently 
+        running is managed by execution context
+
+Name/Value pairs
+------------------
+A name which mapes to a unique value (name: 'uma')
+
+Object
+-------
+A collection of these name value pairs
+
+Global environment and Global Object
+------------------------------------
+When ever code is running in javascript it runs inside an execution context 
+
+Execution Context (Global)   
+-------------------------
+
+Global Object   // javascript execution engine creating these two things for us
+this 
+
+this - window ( this browser window)
+Global Object - window
+
+Global -  means not inside the function
+
+Hoisting
+---------
+When you declare variables and functions in javascript, the execution 
+engine sets up a memory space for variables and functions.
+
+1. If it is a a variable it will keep that variable in memory and assign 
+   a default value called undefined
+
+2. If it is a function it will copy entire function and keeps in memory 
+
+
+
+1. find out all the variables and functions in the code file
+
+a = undefined
+function b() {
+    console.log('called b')
+}
+
+2. executing the code 
+
+This phenomenon is called hoisting
+
+
+undefined (23/09/2020)
+----------
+Special value in javascript which takes up memory space
+
+Warning : Never ever declare  a variable undefined, because 
+          it is difficult to find value is 'undefined' because
+          we set it or javascript execution engine set it up
+
+
+Types 
+--------
+Dynamic Typing
+--------------
+you don't tell the engine what type of data a variabe holds,
+it figures out while your code running.
+
+Strict Typing
+-------------
+C# or java follows script typing
+
+Prmitive Types
+-----------------
+A type of data that represents a  single value is called primitive data type
+
+1. undefined - this represents lack of existance ( we should never use this)
+2. null - this represents lack of existance ( we can set a variable to this)
+3. Boolean - treu or false
+4. number - integer/floating type(decimal)
+5. string - a sequence oc characters
+6. Symbol - used in ES6
+
+Anythiing which is not primitive is an Object in javascript
+
+object 
+function
+array
+Date
+RegularExpression
+
+Functions
+--------------
+
+Function is a block of code wrapped around flower brackets and invocated later
+
+function functionname(){
+
+}
+
+1. Regular Functions
+2. Anonymous Functions
+3. Immediately Invoked functions ( IIFs)
+
+First Class Functions
+-------------------
+1. can be Invoked
+2. assign to a variable
+3. passed as a parameter to another variable
+
+Advantages with IIFs (24/09/2020)
+--------------------
+1. will not create unnecessary gloabal variables and functions
+2. functions and variables defined don not conflict
+
+
+Objects
+--------
+An Object is a collection of name value pairs
+
+1. using New Object()
+2. using Object Literal {}
+3. using Object.create()
+4. Construtor function
+
+Object.create() method creates a new object using an existing 
+object or null as the protoype for newly created Object
+
+var person = Object.create(null) // create an empty/null object
+var person = Object.create({}) // create a normal function
+
+
+JSON
+-------
+JavaScript Object Notation
+
+common usage of 
+
+Inspired by the object literal notation {}
+
+<data>
+    <firstname>uma</firstname>
+    <lastName>Mahesh</lastName>
+</data>
+
+JSON
+------
+common usage of JSON is to exchange data to/from web servers
+When sending data to a webserver that data has to be string 
+
+{   
+    "firstname": "uma",
+    "lastName": "Mahesh"
+}
+
+Object
+---------
+{   
+    firstname: "uma",
+    lastName: "Mahesh"
+}
+
+poperties have to be wrapped in quotes for JSON
+
+Anything which is JSON valid is valid in object literal
+
+
+JSON.stringify - converts a javascript value into seriazlied string 
+
+JSOn.parser - deserialzes a JSON String to a JSON Object
+
+arrays
+-------
+An array is an object that can store a collection of items
+
+Useful when you want to store large amount of data
+
+
+var students = ["Shanthanu", "Sunitha" , "Surekha", "Prdeep"]
+
+var people = new Array("Uma", "Swathi", "Jagrav", "Manasvi)
+
+In javascript arrays are object types with special constructor
+
+var array = new Array(3) - length 
+var array  = new Array(100000) - length will not create any memory
+
+array index starts from zero
