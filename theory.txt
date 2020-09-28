@@ -233,3 +233,22 @@ var array = new Array(3) - length
 var array  = new Array(100000) - length will not create any memory
 
 array index starts from zero
+
+Closure (28/09/2020)
+----------
+Inner functions having access to the variables of outer functions
+
+Bind vs call vs apply
+-----------------------
+
+bind - sets `this` keyword and creates a copy of that function
+
+call -  sets `this` keyword and execute the function immediately and 
+        doesn't create a new copy of the function, it takes comma seperated values
+
+apply - sets `this` keyword, similar to call but the difference is apply accepts
+        an array of arguments instead comma seperated values
+
+
+The call, bind and apply methods can be used to set `this` keyword 
+independent of how function is called
