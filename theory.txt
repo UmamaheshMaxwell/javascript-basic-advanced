@@ -13,6 +13,7 @@ Prototypes
 Class
 Inheritance
 Polymorphism
+Error Handling
 Singleton
 Module Pattern
 
@@ -252,3 +253,104 @@ apply - sets `this` keyword, similar to call but the difference is apply accepts
 
 The call, bind and apply methods can be used to set `this` keyword 
 independent of how function is called
+
+Class (29/09/2020)
+------------------
+Javascript is a prototype-based language which contains no class statement 
+such as is found in C# or Java
+
+Javascript uses function as a class
+
+e.g. 
+
+function Student(){
+
+}
+
+instance
+--------
+To create instance of the class
+
+function Person(){
+
+}
+
+var person1 = new Person();
+
+var person2 = new Person();
+
+constructor
+-----------
+
+function Order(){
+    console.log('Order is placed')
+}
+
+var order = new Order(); // Order() is called constructor
+
+Properties
+----------
+function Customer(gender){
+    this.gender = gender
+}
+
+
+var customer1 = new Customer('Female')
+var customer2 = new Customer('Male')
+
+
+Prototype
+----------
+
+The prototype is an object that is associated with 
+every functions and objects by default in javascript
+
+This is special type of obejct to which additional properties and methods can be attached.
+Which will shared acorss all the instnaces of its contsructor function
+
+Usages
+------
+1. extend properties and methods of an object
+2. To implement inheritance
+
+Object 'prototype'
+-----------------
+Every Object which is created using object literal syntax or constructor syntax 
+with new keyword includes __proto__ property that points to prortotype object of
+a function that created this Object
+
+Inheritance (1/10/2020)
+-----------------------
+One Object get access to the properties and methods of another object.
+
+In Javascript inherirtance is supported by using prototype object. 
+This is also called prototypal inheritance.
+
+Polymorphism 
+-------------
+
+Means function existing in many forms. 
+
+In programming, the ability for objects to present the same interface 
+for different behaviour
+
+Error Handling
+---------------
+Helps us to handle the errors (runtime), for accessing undefined variables 
+or undefined functions
+
+try- catch-finally block
+
+try {
+    // code that may or may not throws error
+}
+catch {
+    // code to be executed if an error occurs
+}
+finally {
+    // code to be executed regardless of an error occurs or not
+}
+
+
+
+
