@@ -351,6 +351,29 @@ finally {
     // code to be executed regardless of an error occurs or not
 }
 
+Singleton Design Pattern
+------------------------
+
+Limits the number of instnaces of a perticular object to just one. This single instance
+is called the Singleton.
+
+Singletons are useful in stuations where system wide actions need to be coorodinated 
+from a single Central place
+
+E.g  Database Connection pool
+
+The pool that manages the creation, destruction and lifetime of all database connections
+for the entire application
 
 
+Module Pattern
+---------------
+Deals with code encapsulation. It is used to create private publci properties
 
+
+code encapsulation
+-------------------
+
+var person = function(){
+    var name =  'uma'
+}
